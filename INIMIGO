@@ -1,0 +1,74 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
+package com.mycompany.rpggame;
+
+/**
+ *
+ * @author 19300029
+ */
+public class Inimigo {
+    
+    
+    String nome;
+    String arma;
+    String pocao;
+    String magia;
+    int vida;
+    
+    public void Descricoes_vilao(){
+        
+        System.out.println("Nome do inimigo: "+nome);
+        System.out.println("Sua poção eh"+pocao);
+        System.out.println("Nome da arma "+arma);
+        System.out.println("sua vida "+vida);
+        
+    }
+    
+    /**
+     *
+     */
+    
+    public void Armas(){
+    
+    
+    int espadaTorta=1;
+    int adagaSangrenta=2;
+    int lançaRustica=3;
+    int espadaReborn=4;
+    int arcoAk=5;
+    int espadaDivina=6;
+    
+    }  
+    
+    
+   
+    
+    
+    
+    public void Chefe(){
+    
+    
+        System.out.println("Nome do chefe:"+nome);
+        System.out.println("Sua Arma eh :"+arma);
+        System.out.println("sua magia eh :"+magia);
+        System.out.println("Sua vida eh"+vida);
+        
+    
+   
+    
+    }
+    
+
+
+ public void personagem(String b)
+ {
+     System.err.println("Novo personagem adicionado :" + b);
+ }
+
+    void vida() {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
+
+}
