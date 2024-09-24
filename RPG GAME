@@ -1,0 +1,67 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ */
+
+package com.mycompany.rpggame;
+
+/**
+ *
+ * @author CESUPAARGO
+ */
+import java.util.Scanner;
+
+public class RPGGame {
+    
+    /* public static void main(String[] args) {
+        RPGGame game = new RPGGame();
+        game.start();
+    }*/
+
+    
+    public void start() {
+        boolean isRunning = true;
+        Scanner scanner = new Scanner(System.in);
+
+        while (isRunning) {
+            exibirMenu();
+            int choice = scanner.nextInt();
+            scanner.nextLine(); 
+
+            switch (choice) {
+                case 1:
+                    exibirHistoria();
+                    break;
+                case 2:
+                    iniciarJogo();
+                    break;
+                case 3:
+                    isRunning = false;
+                    break;
+                default:
+                    System.out.println("Opção inválida. Tente novamente.");
+                    break;
+            }
+        }
+        scanner.close();
+    }
+
+    private void exibirMenu() {
+        System.out.println("=== MENU ===");
+        System.out.println("1. Contar História");
+        System.out.println("2. Começar Jogo");
+        System.out.println("3. Fechar Jogo");
+        System.out.print("Escolha uma opção: ");
+    }
+
+    private void exibirHistoria() {
+        System.out.println("......");
+    
+    }
+
+    private void iniciarJogo() {
+        
+    
+        System.out.println("Iniciando jogo...");
+      
+    }
+}
