@@ -1,0 +1,93 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
+package com.mycompany.rpggame;
+
+/**
+ *
+ * @author CESUPAARGO
+ */
+import java.util.Random;
+import java.util.Scanner;
+
+public class SistemaDeCombate {
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        Random random = new Random();
+
+        int vidaJogador = 100;
+        int vidaInimigo = 100;
+
+        System.out.println("Bem-vindo ao .................!");
+        System.out.println("Você enfrentará um inimigo com 100 pontos de vida.");
+
+        while (vidaJogador > 0 && vidaInimigo > 0) {
+            System.out.println("\nEscolha uma ação:");
+            System.out.println("1. Bater no inimigo");
+            System.out.println("2. Tomar uma poção de cura");
+            System.out.println("3. Lançar uma poção de raio");
+            System.out.print("Opção: ");
+
+            int escolha = scanner.nextInt();
+
+            switch (escolha) {
+                case 1:
+                    int danoJogador = random.nextInt(10) + 1;
+                    int danoInimigo = random.nextInt(10) + 1;
+
+                    vidaInimigo -= danoJogador;
+                    vidaJogador -= danoInimigo;
+
+                    System.out.println("Você causou " + danoJogador + " de dano no inimigo.");
+                    System.out.println("O inimigo causou " + danoInimigo + " de dano em você.");
+                    break;
+
+                case 2:
+                    int cura = random.nextInt(20) + 10;
+                    vidaJogador += cura;
+
+                    System.out.println("Você tomou uma poção de cura e recuperou " + cura + " pontos de vida.");
+                    break;
+
+                case 3:
+                    int raio = random.nextInt(30) + 10;
+                    vidaInimigo -= raio;
+
+                    System.out.println("Você lançou uma poção de raio no inimigo e causou " + raio + " de dano.");
+                    break;
+
+                default:
+                    System.out.println("Opção inválida. Escolha novamente.");
+                    break;
+            }
+
+            if (vidaJogador <= 0) {
+                System.out.println("Você foi derrotado. Game Over!");
+            } else if (vidaInimigo <= 0) {
+                System.out.println("Você derrotou o inimigo! Parabéns!");
+            } else {
+                System.out.println("Status:");
+                System.out.println("Sua vida: " + vidaJogador);
+                System.out.println("Vida do inimigo: " + vidaInimigo);
+            }
+        }
+
+        scanner.close();
+    }
+
+
+//////Sistema de premiação
+
+
+
+
+
+
+
+
+
+
+
+}
